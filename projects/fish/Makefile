@@ -1,9 +1,9 @@
 all: install update
 install: 
 	apt install -y fish lm-sensors
-	chsh -s /usr/bin/fish
 
 update:
+	chsh -s /usr/bin/fish
 	rm -rf $(HOME)/.config/fish/*
 	mkdir -p $(HOME)/.config/fish
 	cp -r ./configs/* $(HOME)/.config/fish/
