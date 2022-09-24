@@ -1,7 +1,7 @@
 all: install update
 install: 
 	# bashの入力補完
-	apt install bash-completion -y && \
+	apt install bash-completion -y
 
 update:
 	# bashの入力補完
