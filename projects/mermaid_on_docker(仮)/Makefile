@@ -5,7 +5,11 @@ all: install update
 
 install: 
 	dnf update -y
-	dnf install libXScrnSaver chromium -y
+
+	# pdf出力のためのchromeとライブラリをインストール
+	dnf install -y libXScrnSaver chromium
+	# 日本語に対応
+	dnf install -y ibus-kkc sazanami-gothic-fonts sazanami-mincho-fonts ipa-gothic-fonts ipa-mincho-fonts vlgothic-fonts vlgothic-p-fonts
 	#TODO: VScode拡張機能を自動インストール
 
 .PHONEY: all install update
