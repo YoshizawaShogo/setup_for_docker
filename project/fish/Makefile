@@ -10,10 +10,6 @@ update:
 	rm -rf $(HOME)/.config/fish/*
 	mkdir -p $(HOME)/.config/fish
 	cp -r ./configs/* $(HOME)/.config/fish/
-
-	# bashで書かれたsourceファイル実行に対応するために必要
-	fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
-	fish -c "fisher install edc/bass"
 	
 import:
 	rm -rf ./config/*
