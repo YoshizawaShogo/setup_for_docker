@@ -1,4 +1,7 @@
 all: install update
+
+SHELL=/bin/bash
+
 install: 
 	apt install -y fish lm-sensors curl
 
@@ -9,8 +12,8 @@ update:
 	cp -r ./configs/* $(HOME)/.config/fish/
 
 	# bashで書かれたsourceファイル実行に対応するために必要
-	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-	fisher install edc/bass
+	fish -c "curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher"
+	fish -c "fisher install edc/bass"
 	
 import:
 	rm -rf ./config/*
