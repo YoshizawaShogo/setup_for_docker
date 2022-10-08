@@ -1,6 +1,6 @@
 all: install update
 
-WORKDIR := "~/atcoder_rust"
+WORKDIR := "${HOME}/atcoder_rust"
 
 install: 
 	apt install -y libssl-dev pkg-config
