@@ -6,6 +6,7 @@ SETUVAR _fish_abbr__2E_2E_2E_:cd\x20\x2e\x2e/\x2e\x2e
 SETUVAR _fish_abbr_c:cargo
 SETUVAR _fish_abbr_cb:cargo\x20build
 SETUVAR _fish_abbr_cc:cargo\x20clean
+SETUVAR _fish_abbr_cdoc:cargo\x20doc
 SETUVAR _fish_abbr_cr:cargo\x20run
 SETUVAR _fish_abbr_ct:cargo\x20test
 SETUVAR _fish_abbr_g:git
@@ -59,3 +60,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/root/\x2ecargo/bin
