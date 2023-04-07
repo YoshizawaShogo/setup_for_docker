@@ -11,9 +11,3 @@ if status --is-interactive
   alias cat bat
 end
 set -U fish_user_paths  /root/.cargo/bin
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /root/mambaforge/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
