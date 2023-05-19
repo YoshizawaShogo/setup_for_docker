@@ -4,8 +4,8 @@ SHELL=/bin/bash
 
 install: 
 	apt install -y fish lm-sensors curl python3 python3-pip build-essential git && \
+	$(MAKE) update && \
 	curl "https://sh.rustup.rs" | sh -s -- -y && \
-	[ -e ~/.config/fish/config.fish ] && echo "echo '\nset -U fish_user_paths $$fish_user_paths $$HOME/.cargo/bin' >> ~/.config/fish/config.fish" | sh && \
 	cargo install bat exa
 
 update:
