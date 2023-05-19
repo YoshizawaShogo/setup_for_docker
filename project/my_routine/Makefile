@@ -4,9 +4,8 @@ SHELL=/bin/bash
 
 install: 
 	apt install -y fish lm-sensors curl python3 python3-pip build-essential git && \
-	$(MAKE) update && \
 	curl "https://sh.rustup.rs" | sh -s -- -y && \
-	bash -c 'cargo install bat exa'
+	source ~/.cargo/env && cargo install bat exa
 
 update:
 	chsh -s /usr/bin/fish
