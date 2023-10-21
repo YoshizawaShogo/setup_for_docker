@@ -1,2 +1,2 @@
-# setup_for_linux
-環境構築において共通している作業をまとめる
+# setup_for_docker
+dockerコンテナ上のUbuntuにおける環境構築方法のメモ
