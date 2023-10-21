@@ -6,3 +6,19 @@ source /etc/bash_completion
 
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
+
+alias c='clear'
+pushd()
+{
+  if [ $# -eq 0 ]; then
+    DIR="${HOME}"
+  else
+    DIR="$1"
+  fi
+
+  builtin pushd "${DIR}"
+}
+
+alias cd='pushd > /dev/null'
+alias p='popd > /dev/null'
+alias u='cd ..' # up
