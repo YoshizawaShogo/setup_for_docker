@@ -41,7 +41,7 @@ rust-atcoder-interactive: install-rust
 	cargo atcoder login
 
 bash-customize: japanese-language
-	apt install -y bash-completion fzf
+	apt install -y bash-completion
 	cat src/additional_bashrc.txt >> ${HOME}/.bashrc
 
 install-rust:
