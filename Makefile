@@ -50,6 +50,7 @@ bash-customize: japanese-language
 fish: japanese-language
 	apt install -y fish python3 python3-pip curl
 	chsh -s /usr/bin/fish
+	curl -L https://get.oh-my.fish | fish
 	fish src/init.fish
 
 install-rust:
