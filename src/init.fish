@@ -1,8 +1,11 @@
 #! /usr/bin/fish
 
 set -U fish_greeting ""
+set -Ux LANG ja_JP.UTF-8
+curl -L https://get.oh-my.fish | fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install jethrokuan/fzf rafaelrinaldi/pure
+fisher install jethrokuan/fzf
+apt install -y fzf
 
 abbr -a -U -- .. 'cd ..'
 abbr -a -U -- ... 'cd ../..'

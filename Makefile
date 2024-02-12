@@ -13,7 +13,6 @@ japanese-language:
 	export DEBIAN_FRONTEND=noninteractive && \
 	apt install -y locales
 	locale-gen ja_JP.UTF-8
-	echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
 git-init-interactive:
 	git config --global core.editor 'code --wait'
@@ -46,8 +45,9 @@ rust-atcoder-interactive: install-rust
 bash-customize: japanese-language
 	apt install -y bash-completion
 	cat src/additional_bashrc.txt >> ${HOME}/.bashrc
+	echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
-fish:
+fish: japanese-language
 	apt install -y fish python3 python3-pip curl
 	chsh -s /usr/bin/fish
 	fish src/init.fish
