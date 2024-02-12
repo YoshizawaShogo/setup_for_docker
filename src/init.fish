@@ -1,4 +1,9 @@
 #! /usr/bin/fish
+
+set -U fish_greeting ""
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+fisher install jethrokuan/fzf rafaelrinaldi/pure
+
 abbr -a -U -- .. 'cd ..'
 abbr -a -U -- ... 'cd ../..'
 abbr -a -U -- p prevd

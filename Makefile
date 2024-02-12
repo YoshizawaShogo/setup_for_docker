@@ -50,10 +50,7 @@ bash-customize: japanese-language
 fish:
 	apt install -y fish python3 python3-pip curl
 	chsh -s /usr/bin/fish
-	fish && \
-	set -U fish_greeting "" && \
-	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && \
-	fisher install jethrokuan/fzf rafaelrinaldi/pure
+	fish src/init.fish
 
 install-rust:
 	apt install -y curl
