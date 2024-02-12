@@ -16,3 +16,5 @@ pushd()
 alias cd='pushd > /dev/null'
 alias p='popd > /dev/null'
 alias u='cd ..' # up
+
+export MAKEFLAGS='-j8'
