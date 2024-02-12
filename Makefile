@@ -1,3 +1,6 @@
+default:
+	@echo 'Please specify target.'
+
 apt-update:
 	apt update
 
@@ -44,11 +47,19 @@ bash-customize: japanese-language
 	apt install -y bash-completion
 	cat src/additional_bashrc.txt >> ${HOME}/.bashrc
 
+fish:
+	apt install -y fish python3 python3-pip curl
+	chsh -s /usr/bin/fish
+	fish && \
+	set -U fish_greeting "" && \
+	curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher && \
+	fisher install jethrokuan/fzf rafaelrinaldi/pure
+
 install-rust:
 	apt install -y curl
 	curl "https://sh.rustup.rs" | sh -s -- -y
 
-all: apt-update japan-time-zone japanese-language unminimize-docker bash-customize install-rust
+all: apt-update japan-time-zone japanese-language unminimize-docker bash-customize install-rust fish
 
 interactive: git-init-interactive rust-atcoder-interactive
 
