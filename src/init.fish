@@ -5,7 +5,7 @@ set -Ux LANG ja_JP.UTF-8
 set -Ux MAKEFLAGS '-j8'
 curl -L https://get.oh-my.fish | fish
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install jethrokuan/fzf
+fisher install jethrokuan/fzf jethrokuan/z
 apt install -y fzf
 
 abbr -a -U -- .. 'cd ..'
