@@ -3,6 +3,7 @@
 set -U fish_greeting ''
 set -Ux LANG ja_JP.UTF-8
 set -Ux MAKEFLAGS '-j8'
+set -U fish_user_paths $fish_user_paths $HOME/.cargo/bin
 
 curl -L -o install.fish https://get.oh-my.fish
 fish install.fish --noninteractive
