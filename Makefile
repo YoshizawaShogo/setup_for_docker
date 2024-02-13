@@ -53,7 +53,7 @@ fish: japanese-language
 	fish src/init.fish
 
 install-rust:
-	apt install -y curl
+	apt install -y curl gdb build-essential
 	curl "https://sh.rustup.rs" | sh -s -- -y
 
 all: apt-update japan-time-zone japanese-language unminimize-docker bash-customize install-rust fish
